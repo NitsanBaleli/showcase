@@ -1,27 +1,37 @@
-# Showcase
+# templates/spa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This template leverages [Remix SPA Mode](https://remix.run/docs/en/main/future/spa-mode) to build your app as a Single-Page Application using [Client Data](https://remix.run/docs/en/main/guides/client-data) for all of you data loads and mutations.
 
-## Development server
+⚠️ This is built on top of the Remix Vite template. Remix support for Vite is currently unstable and not recommended for production.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+📖 See the [Remix Vite docs][remix-vite-docs] for details on supported features.
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```shellscript
+npx create-remix@latest --template remix-run/remix/templates/spa
+```
 
-## Build
+## Development
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You can develop your SPA app just like you would a normal Remix app, via:
 
-## Running unit tests
+```shellscript
+npm run dev
+```
 
-Run `ng test2` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Production
 
-## Running end-to-end tests
+When you are ready yo build a production version of your app, `npm run build` will generate your assets and an `index.html` for the SPA.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```shellscript
+npm run build
+```
 
-## Further help
+You can serve this from any server of your choosing, for a simple example, you could use [http-server](https://www.npmjs.com/package/http-server):
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```shellscript
+npx http-server build/client/
+```
+
+[remix-vite-docs]: https://remix.run/docs/en/main/future/vite
