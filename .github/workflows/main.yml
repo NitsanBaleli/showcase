@@ -26,6 +26,10 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          npm run deploy # Replace with your deploy command
+          # Replace with your deploy command
+          # For example, if you're using gh-pages package
+          npm install -g gh-pages
+          npx gh-pages -d build/client
+
           echo "Deployed to GitHub Pages"
 
